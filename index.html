@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf8">
@@ -9,28 +9,46 @@
         padding: 0;
         width: 100%;
         height: 100%;
+        overflow: hidden;
       }
       #app{
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         display: flex;
         flex-direction: column;
-        overflow:hidden;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      #img1-container{
+        flex: 1 1 auto;
+        min-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
       }
       #img1{
-        flex:1;
-        min-width:0;
-        min-height:0;
-        object-fit:contain;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
       }
       #textbox1{
-        height:2cm;
+        height: 2cm;
+        min-height: 2cm;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        overflow: auto;
       }
     </style>
   </head>
   <body>
     <div id="app">
-      <img id="img1" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1170986%2Fpexels-photo-1170986.jpeg%3Fcs%3Dsrgb%26dl%3Dadorable-animal-animal-photography-1170986.jpg%26fm%3Djpg&f=1&nofb=1&ipt=75e839ef7b053d87d4359006ce80462afe6869043c543a94c7fc28e2b64be01b"/>
+      <div id="img1-container">
+        <img id="img1" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1170986%2Fpexels-photo-1170986.jpeg%3Fcs%3Dsrgb%26dl%3Dadorable-animal-animal-photography-1170986.jpg%26fm%3Djpg&f=1&nofb=1&ipt=75e839ef7b053d87d4359006ce80462afe6869043c543a94c7fc28e2b64be01b"/>
+      </div>
       <div id="textbox1">
         <p> Тут расположен какой-то текст. </p>
       </div>
